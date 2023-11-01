@@ -1,0 +1,215 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content %}
+
+	<div class="post-wrapper">
+		<div class="postpic">
+			<div class="post">
+				<h4>{{post.title}}</h4>
+				<img src="{{post.image.url}}" class="post-image">
+				{% for post in categories %}
+				<div class="category">{{post.name}}</div>
+				{% endfor %}
+				<div class="post-para">
+					<p  class="paragraph">{{post.body}}</p>
+				</div>
+			</div>
+			<div class="tag">
+				
+				<div>Tags
+					{% for tag in tags %}
+				<div class="tag-box">{{tag.name}}</div>
+				{% endfor %}
+			</div>
+			
+			</div>
+			<div><hr width="100%"></div>
+			<!--social icons -->
+				<div class="faicon">
+						
+					<i class="fa fa-facebook icon" style="font-size:20px; color:#cc0066"></i>
+					<i class="fa fa-instagram icon" style="font-size:20px; color:#cc0066"></i>
+					<i class="fa fa-twitter icon" style="font-size:20px; color:#cc0066"></i>
+					<i class="fa fa-pinterest icon" style="font-size:20px;color:#cc0066"></i>
+					<i class="ion ion-social-youtube" style="font-size:20px;color:#cc0066"></i>
+					<i class="fa fa-comment icon" style="font-size:20px; float:right;color:#cc0066;">2 Comments</i>
+					</div>
+			
+			<!-- Similar Posts -->
+			<div class="similar">
+				<h4>Related Posts</h4> 
+				{% for similar in similar_posts %}
+				<div class="similar_card">
+
+					<img src="{{similar.image.url}}" class="img-related">
+					<div class="container2">
+					<h5>{{similar.title}}</h5>
+					</div>
+				</div>
+				{% endfor %}
+				
+			</div>
+			<!-- Comment Form-->
+			<div class="form_div">
+				<div><hr width="90%"></div>
+				<form class="form-comment">
+					<h3 class="heading-comment">Leave A Comment</h3>
+					<input type="text" name="firstname" placeholder="First Name">
+					<input type="text" name="lastname" placeholder="Last Name">
+					<input type="email" class="comment_email" name="email" placeholder="Email Address">
+					
+					<textarea placeholder="Write a Comment"></textarea>
+					
+					<input type="submit" value="Submit" class="submit_comment"> 
+				</form>
+			</div>
+		</div>
+
+		
+		<div class="card-post"> 
+			<div class="search-post">
+				<form class="search-form" >
+					<input type="search" name="search" placeholder="Search for Post">	
+					<span><i class="ion ion-search" style="color: white;font-size:15px;"></i></span>
+				</form>
+			</div>
+			
+			<div class="avator">
+				<div class="write">created {{post.publish_date}} <br> <i class="fa fa-user-circle icon" style="color: #cc0066; font-size:20px;"></i> Aurthor name:
+					Jessy</div>
+				<img src="{% static 'images/ava.jpg' %}" style="width:60px; height:70px; border-radius: 20%; object-fit: cover;">
+					
+				<span class="ava-box1"><i class="fa fa-thumbs-up icon" style="color: #cc0066;font-size:20px; padding: 12px;"></i>Likes</span>
+				<span class="ava-box2"><i class="fa fa-comments icon" style="color: #cc0066;font-size:20px; padding: 12px;"></i>Comments</span>
+			</div>
+			
+			
+			<div class="cards-side">
+				<h2>Popular posts</h2>
+	
+				<div class="cards-latest2">
+					
+						<img src="images/fashion.jpg" style="width:75px; height:70px; border-radius: 10%; object-fit: cover;">
+						<div class="l">
+							<span class="lat-smallbox"></span>
+							<span class="lat-smallbox2"><i class="ion ion-eye"style="color: #cc0066;font-size:18px;">Views</i></span>
+						</div>
+					
+				</div>
+				<div class="cards-latest2">
+						<img src="images/fashion.jpg" style="width:75px; height:70px; border-radius: 10%; object-fit: cover;">
+						<div class="">
+							<span class="lat-smallbox"></span>
+							<span class="lat-smallbox2"><i class="ion ion-eye"style="color: #cc0066;font-size:18px;">Views</i></span>
+						</div>
+					
+				</div>
+				<div class="cards-latest2">
+					
+						<img src="images/fashion.jpg" style="width:75px; height:70px; border-radius: 10%; object-fit: cover;">
+						<div class="l">
+							<span class="lat-smallbox"></span>
+							<span class="lat-smallbox2"><i class="ion ion-eye"style="color: #cc0066;font-size:18px; padding: 12px;">Views</i></span>
+						</div>
+				</div>
+			</div>
+			<div class="cards-side">
+				<h2>Latest Posts</h2>
+				{% for latest in object_lists %}
+				<div class="cards-latest2">
+					
+						<a href="{% url 'blog:post' post.pk %}"><img src="{{latest.image.url}}" style="width:75px; height:70px; border-radius: 10%; object-fit: cover;"></a>
+						<div class="lat">
+							<a href="{% url 'blog:post' post.pk %}"><span class="lat-smallbox">{{latest.name}}</span></a>
+							<span class="lat-smallbox2"><i class="ion ion-eye"style="color: #cc0066;font-size:18px;">Views</i></span>
+						</div>
+					
+				</div>
+				{% endfor %}
+				
+				
+			</div>
+			<div class="cards-side">
+				<h2>Categories</h2>
+				{% for category in categorys %}
+				<div class="cards-latest2">
+					
+						<img src="{{category.image.url}}" style="width:75px; height:70px; border-radius: 10%; object-fit: cover;">
+						<div class="l">
+							<span class="lat-smallbox">{{category.name}}</span>
+							<span class="lat-smallbox2"><i class="ion ion-eye"style="color: #cc0066;font-size:18px;">Views</i></span>
+						</div>
+					
+				</div>
+				{% endfor %}
+			</div>
+			<div class="tags">
+				<div class="tag">Tags
+					{% for tag in tags %}
+				<div class="tag-box">{{tag.name}}</div>
+				
+				{% endfor %}
+				</div>
+		</div>
+	</div>
+
+		
+	
+
+
+	<!--start footer-->
+	<footer>
+		<!--logo-footer-->
+		<div class="footer-container">
+				
+			<div class="logo-parag">
+				<div class="logorey">
+					<img src="{%static 'images/logo3 2.png' %}" class="logory">
+				</div>
+				<div class="logopara" >
+				<p > we are located at Mbeya Soweto Road<br>
+				Gorofa number 423<br>
+				p.o.box 2331 </p>
+				</div>
+			</div>
+			<div class="footer-links">
+				<div class="links">
+					<a href="#">Interior</a>
+					<a href="#"> Nails</a>
+					<a href="#"> Fashion</a> 
+					<a href="#">Lifestyle</a>
+					<a href="#"> Lifestyle</a> 
+					<a href="#">Fashion</a> 
+					<a href="#">Lifestyle</a> 
+					<a href="#">Interior</a>
+					<a href="#"> Nails</a>
+					<a href="#"> Exterior</a>
+				
+				</div>
+				<div class="copyright" >
+					<p>Copyright@MalingaFashion&lifestyle.com</p>
+				</div>
+
+			</div>
+			<div class="socials">
+				<div class="social-footer">
+					<i class="fa fa-facebook" style="font-size:30px; color:white;"></i>
+					<i class="fa fa-instagram icon" style="font-size:30px; color:white;"></i>
+					<i class="fa fa-twitter icon"style="font-size:30px; color:white;"></i>
+					<i class="fa fa-pinterest icon" style="font-size:30px; color:white;"></i>
+					<i class="ion ion-social-youtube" style="font-size:30px; color:white;"></i>
+				</div>
+					<div class=" info-social">
+					<p>follow us on twitter as Malingas_one,<br>on Facebook as Malinga's_fashion,<br>on Instagram Malinga's-Fashion,<br>on Pinterest at Malingas'fashion & lifestyle,<br> on Youtube Malinga's Fashion & lifestyle.</p>
+					<div>
+			</div>
+			
+		</div>
+	</footer>
+
+</body>
+</html>
+
+{% endblock %}

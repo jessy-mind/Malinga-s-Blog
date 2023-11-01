@@ -1,0 +1,104 @@
+{% extends 'main.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+
+{% block content %}
+<body>
+
+	
+
+
+		<div class="imge">
+			<img src="{% static 'images/blogs/b4.jpg' %}"  class="b1" style=" width:100%; height: 500px; object-fit:cover;" >
+			<div class="box-blog">
+				<div>Blogs</div>
+			</div>
+		</div>
+		<div class="blogs2">
+			{% for post in posts %}
+			<div class="cards2">
+				<div class="b2">
+					<img src="{{post.image.url}}" class="img" style="object-fit: cover;" width="380" height="450">
+					<h1 class="capt2">{{post.name}}</h1>
+					<div class="likes">
+					<span class="#small-box"><i class="fa fa-calendar icon" style="font-size:20px; color:#cc0066;"></i>{{post.publish_date}}</span>
+					<hr width="130px" left="150">
+					<span class="#small-box"><i class="fa fa-comments icon" style="font-size:20px; color:#cc0066;"></i>41 Comments </span>
+					<hr width="130px">
+					
+					<span class="#small-box"><i class="fa fa-thumbs-up icon" style="font-size:20px; color:#cc0066;"></i>12 Likes </span>
+					</div>
+				</div>
+				
+				<div class="text">
+					<div class="para-blogs">
+						
+					<h2>{{post.title}}</h2>					
+
+					<p>{{post.body|truncatewords:43}}</p>
+					<a href="{% url 'blog:post' post.pk %}"><button>Read More</button></a>
+					</div>	
+					
+				</div>
+				
+			</div>
+				
+				{% endfor %}
+		</div>
+
+
+		<!--start footer-->
+	<footer>
+		<!--logo-footer-->
+		<div class="footer-container">
+				
+			<div class="logo-parag">
+				<div class="logorey">
+					<img src="{% static 'images/logo3 2.png' %}"  class="logory">
+				</div>
+				<div class="logopara" >
+				<p > we are located at Mbeya Soweto Road<br>
+				Gorofa number 423<br>
+				p.o.box 2331 </p>
+				</div>
+			</div>
+			<div class="footer-links">
+				<div class="links">
+					<a href="#">Interior</a>
+					<a href="#"> Nails</a>
+					<a href="#"> Fashion</a> 
+					<a href="#">Lifestyle</a>
+					<a href="#"> Lifestyle</a> 
+					<a href="#">Fashion</a> 
+					<a href="#">Lifestyle</a> 
+					<a href="#">Interior</a>
+					<a href="#"> Nails</a>
+					<a href="#"> Exterior</a>
+				
+				</div>
+				<div class="copyright" >
+					<p>Copyright@MalingaFashion&lifestyle.com</p>
+				</div>
+
+			</div>
+			<div class="socials">
+				<div class="social-footer">
+					<i class="fa fa-facebook" style="font-size:30px; color:white;"></i>
+					<i class="fa fa-instagram icon" style="font-size:30px; color:white;"></i>
+					<i class="fa fa-twitter icon"style="font-size:30px; color:white;"></i>
+					<i class="fa fa-pinterest icon" style="font-size:30px; color:white;"></i>
+					<i class="ion ion-social-youtube" style="font-size:30px; color:white;"></i>
+				</div>
+					<div class=" info-social">
+					<p>follow us on twitter as Malingas_one,<br>on Facebook as Malinga's_fashion,<br>on Instagram Malinga's-Fashion,<br>on Pinterest at Malingas'fashion & lifestyle,<br> on Youtube Malinga's Fashion & lifestyle.</p>
+					<div>
+			</div>
+			
+		</div>
+	</footer>
+		
+</body>
+</html>
+{% endblock %}
+

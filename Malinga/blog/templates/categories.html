@@ -1,0 +1,81 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+	<div class="banner">
+		<img src="{% static 'images/b1.jpg' %}" style="width:100%; height:500px; object-fit: cover;">
+		<span class="span-ban">Categories</span>
+	</div>
+
+	<div class="categories">
+		
+		{% for category in categorys %}
+		<div class="cards_category">
+			
+			<img src="{{category.image.url}}" style="object-fit: cover; border-radius: 20px; width:360px; height:450px; ">
+			
+			<div class="card_box">
+				<span class="card_box1">{{category.name}}</span>
+				<span class="card_box2"><i class="ion ion-eye" style="color: #cc0066;font-size:20px;"></i>views</span>	
+			</div>
+			
+		</div>
+		
+		{% endfor %}
+		
+	</div>
+
+		<!--start footer-->
+	<footer>
+		<!--logo-footer-->
+		<div class="footer-container">
+				
+			<div class="logo-parag">
+				<div class="logorey">
+					<img src="{% static 'images/logo3 2.png' %}" class="logory">
+				</div>
+				<div class="logopara" >
+				<p > we are located at Mbeya Soweto Road<br>
+				Gorofa number 423<br>
+				p.o.box 2331 </p>
+				</div>
+			</div>
+			<div class="footer-links">
+				<div class="links">
+					<a href="#">Interior</a>
+					<a href="#"> Nails</a>
+					<a href="#"> Fashion</a> 
+					<a href="#">Lifestyle</a>
+					<a href="#"> Lifestyle</a> 
+					<a href="#">Fashion</a> 
+					<a href="#">Lifestyle</a> 
+					<a href="#">Interior</a>
+					<a href="#"> Nails</a>
+					<a href="#"> Exterior</a>
+				
+				</div>
+				<div class="copyright" >
+					<p>Copyright@MalingaFashion&lifestyle.com</p>
+				</div>
+
+			</div>
+			<div class="socials">
+				<div class="social-footer">
+					<i class="fa fa-facebook" style="font-size:30px; color:white;"></i>
+					<i class="fa fa-instagram icon" style="font-size:30px; color:white;"></i>
+					<i class="fa fa-twitter icon"style="font-size:30px; color:white;"></i>
+					<i class="fa fa-pinterest icon" style="font-size:30px; color:white;"></i>
+					<i class="ion ion-social-youtube" style="font-size:30px; color:white;"></i>
+				</div>
+					<div class=" info-social">
+					<p>follow us on twitter as Malingas_one,<br>on Facebook as Malinga's_fashion,<br>on Instagram Malinga's-Fashion,<br>on Pinterest at Malingas'fashion & lifestyle,<br> on Youtube Malinga's Fashion & lifestyle.</p>
+					<div>
+			</div>
+			
+		</div>
+	</footer>
+
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,360 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+	
+	
+	<!--  start of divided image -->
+	<div class="content">
+		<div class="img-slide">
+			<img src="{% static 'images/jumsuit/16.jpg' %}"  class="b1" width="100%" height="600">
+			<div class="box">
+				<div>Embrace Your own Unique Fashionstyle</div>
+			</div>
+		</div>
+		<div class="img-slide">
+			<img src="{% static 'images/jumsuit/15.jpg' %}" class="b1"  width="100%" height="600">
+			<div class="box">
+				<div>Be the Best version Of Yourself</div>
+			</div>
+		</div>
+	</div>
+	<!--  end of divided image -->
+
+	<!--end of navigation bar -->
+
+	<!--cards images-->
+	<div class="cards-box">
+		<div class="cards">
+			<img src="{% static 'images/nails.jpg' %}"  style="object-fit: cover;" class="b2" width="320" height="275">
+			<div class="container">
+				<h1>Nails</h1>
+			</div>
+		</div>
+		<div class="cards">
+			<img src="{% static 'images/interior.jpg' %}"  style="object-fit: cover;" class="b2" width="320" height="275">
+			<div class="container">
+				<h1>Interior</h1>
+			</div>
+		</div>
+		<div class="cards">
+			<img src="{% static 'images/make-up.jpg' %}"  style="object-fit: cover;" class="b2" width="320" height="275">
+			<div class="container">
+				<h1>Make-up</h1>
+			</div>
+		</div>
+	</div>
+	<!--end of images cards-->
+
+	<!--sign up form-->
+	<div class="newsletter">
+		<div class="heading">Get the latest fashion trends in your inbox</div>
+		<form class="news">
+			<input type="email" class="email_news" placeholder="Your Email address">
+			<input type="submit" value="Subscribe" class="submit_news">
+		</form>
+	</div>
+	<!-- popuar videos-->
+	<div class="popvid">
+			<h1>POPULAR VIDEOS</h1>
+		<div class="pop-videos">
+			<div class="cards-video">
+				<div class="image">
+					<img src="{% static 'images/video_pics/v1.jpg' %}" width="250" height="289">
+					<div class="box-small">
+						
+						<span class="small-box1"><i class="ion ion-clock" style="color: white;font-size:18px;"></i>01:00</span>
+						<span class="small-box2"><i class="ion ion-eye" style="color: white;font-size:20px;"></i>13,789</span>
+					</div>
+				</div>
+
+				<div class="text-1">
+					<h3 class="caption-1">20 Baby Photoshoot Ideas On Christmas eve</h3>
+				</div>	
+			</div>
+			<div class="cards-video">
+				<div class="image">
+					<img src="images/video_pics/v2.jpg" width="250" height="289">
+					<div class="box-small">
+						<span class="small-box1"><i class="ion ion-clock" style="color: white;font-size:18px;"></i>01:47</span>
+						<span class="small-box2"><i class="ion ion-eye" style="color: white;font-size:20px;"></i>1,835</span>
+					</div>
+				</div>
+				<div class="text-1">
+					<h3 class="caption-1">Nails Design This Valentine Season</h3>
+				</div>	
+			</div>
+			<div class="cards-video">
+				<div class="image">
+					<img src="images/video_pics/v4.jpg" width="250" height="289">
+					<div class="box-small">
+						<span class="small-box1"><i class="ion ion-clock icon" style="color: white;font-size:18px;"></i>09:47</span>
+						<span class="small-box2"><i class="ion ion-eye" style="color: white;font-size:20px;"></i>7,739</span>
+					</div>
+				</div>
+				<div class="text-1">
+					<h3 class="caption-1">Christmass Nails Design ideas 2023</h3>
+				</div>		
+			</div>
+
+			<div class="cards-video">
+				<div class="image">
+					<img src="images/video_pics/v6.jpg" width="250" height="289">
+					<div class="box-small">
+						<span class="small-box1"><i class="ion ion-clock" style="color: white;font-size:18px;"></i>11:00</span>
+						<span class="small-box2"><i class="ion ion-eye" style="color: white;font-size:20px;"></i>11,000</span>
+					</div>
+				</div>
+				<div class="text-1">
+					<h3 class="caption-1">Interior Design</h3>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--featured videos-->
+	<div class="row">
+		<div class="col-9">
+			<h1>FEATURED VIDEOS</h1>
+			<div class="featured-border">
+				<span class="cat">FEATURED VIDEOS</span>
+				<span class="cat-1">LIPS</span>
+				<span class="cat-1">MAKE-UP</span>
+				<span class="cat-1">FASHION</span>
+				<span class="cat-1">NAIL</span>
+			</div>
+			<div class="column">
+				<div class="bi-video">
+					<img src="{% static 'images/video_pics/b2.jpg' %}" style="object-fit: cover;" width="200%" height="600">
+					<div class="feature-box1">
+						<span><i class="ion ion-play" style="color: white;font-size:15px;"></i>1:00</span>
+					</div>
+					<div class="feature-box2">
+						<a href="https://www.youtube.com"><span><i class="ion ion-play" style="color: white;font-size:25px;"></i></span></a>
+					</div>
+					<div class="text-big">
+						<h3 class="text-big1">Best 20 Valentine Nails Design 2020</h3>
+						<div class="date">
+						<span>February 9 2022</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="sub-videos">
+					<div class="image-small">
+					<img src="{% static 'images/video_pics/15.jpg' %}" width="150" height="180px">
+					<div class="feature-box">
+						<span><i class="ion ion-play" style="color: white;font-size:15px;"></i>1:00</span>
+					</div>
+					<div class="sub-text">
+						
+						<div class="sub-text1">
+						Christmas nails 
+						</div>
+						<div class="date1">
+							<span>February 9 2022</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+				<div class="sub-videos">
+					<div class="image-small">
+					<img src="images/video_pics/v5.jpg" width="150" height="180px">
+					<div class="feature-box">
+						<span><i class="ion ion-play" style="color: white;font-size:15px;"></i>1:00</span>
+					</div>
+					<div class="sub-text">
+						<div class="sub-text1">
+							<span>Valentine Gifts </span>
+						</div>
+						
+						<div class="date1">
+							<span>February 9 2022</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+				<div class="sub-videos">
+					<div class="image-small">
+					<img src="images/video_pics/v6.jpg" width="150" height="180px">
+					<div class="feature-box">
+						<span><i class="ion ion-play" style="color: white;font-size:15px;"></i>1:00</span>
+					</div>
+					<div class="sub-text">
+						<div class="sub-text1">
+							Home Office Decor
+						</div>
+						<div class="date1">
+							<span >February 9 2022</span>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+		<!--side bar 1-->
+	<aside>
+		<div class="col-ad">
+			<div class="ads-image">
+				<img src="{% static 'images/ads-03.jpg' %}" style="object-fit: cover;" width="300" height="700">
+				<div class="ads-image1"></div>
+				<div class="words"><b>Every Day I am trying to bring to you Better content</b>
+					</br><span class="fash"><br>concerning fashion and lifetyle</span></div>
+				<button class="read">Read More</button>
+			</div>
+		</div>
+	</aside>
+
+		<!--main content -->
+	<div class="row">
+
+		<div class="col-9">
+			<h1>Blog Posts</h1>
+			{% for post in posts%}
+			<div class="post-cards">
+				
+				<div class="b2">
+					<img src="{{post.image.url}}"   style="object-fit: cover; height: 400px;" width="350" class="image-post"><a href="" >
+					<span class="small-box"><i class="fa fa-calendar icon" style="font-size:20px"></i>{{post.publish_date|date:"M d"}} </span>
+							
+						</a>
+					<h1 class="capt">{{post.name}}</h1>
+				</div>
+				<div class="text">
+					<div class="post-p">
+						
+					<h2>{{post.title}}</h2>					
+
+					<p>{{post.body|truncatewords:43 }}</p>
+					<a href="{% url 'blog:post' post.pk %}"><button>Read More</button></a>
+					</div>	
+					<div class="faicon">
+						<div><hr></div>
+						<i class="fa fa-facebook" style="font-size:20px; color:#cc0066;"></i>
+						<i class="fa fa-instagram icon" style="font-size:20px; color:#cc0066;"></i>
+						<i class="fa fa-twitter icon" style="font-size:20px; color:#cc0066;"></i>
+						<i class="fa fa-pinterest icon" style="font-size:20px; color:#cc0066;"></i>
+						<i class="ion ion-social-youtube" style="font-size:20px; color:#cc0066;"></i>
+						<i class="fa fa-comment icon" style="sfont-size:20px; float:right;color:#cc0066;">20 Comments</i>
+						<div><hr></div>
+					</div>
+				</div>
+				
+			</div>
+			{% endfor %}
+		</div>
+		<!--sidebar 2-->
+		
+
+		<div class="col-3">
+			<div class="profile">
+			<img src="{% static 'images/ava.jpg' %}"  style="object-fit: cover;" class="image-pro" width="250" height="250">
+			<h1> Hello</h1>
+				<p>I'm Jessy and this is my creative space.I think that fashion and lifestyle doesn't have to cost a fortune.The most important thing is to enjoy your life and to be happy that's all that matters.I hope you enjoy and you come back often.</p>
+				<a href="posts/dressign_table.html"><button class="read1">Read More</button></a>
+			</div>
+
+		<!--latest post-->
+	
+
+			<div class="latestPost">
+				<h1>Latest Posts</h1>
+				{% for latest in object_lists %}
+				<div class="cards-latest">
+					<div class="image-latest">
+						<img src="{{latest.image.url}}" style="object-fit: cover; width:250px; height: 300px;" >
+						<div class="latest-box">
+							
+							<span class="box1-latest">{{latest.name}}</span>
+							
+							<span class="box2-latest"><i class="ion ion-eye" style="color: white;font-size:20px;"></i>1,835</span>
+						</div>
+					</div>	
+				</div>
+					
+				{% endfor %}
+
+				
+			</div>
+			<div class="latestPost">
+				<h1>Popular Posts</h1>
+				{% for latest in object_lists %}
+				<div class="cards-latest">
+					<div class="image-latest">
+						<img src="{{latest.image.url}}" style="object-fit: cover; width:250px; height: 300px;" >
+						<div class="latest-box">
+							
+							<span class="box1-latest">{{latest.name}}</span>
+							
+							<span class="box2-latest"><i class="ion ion-eye" style="color: white;font-size:20px;"></i>1,835</span>
+						</div>
+					</div>	
+				</div>
+					
+				{% endfor %}
+
+				
+			</div>
+		</div>
+	</div>
+
+		<!--start footer-->
+	<footer>
+		<!--logo-footer-->
+		<div class="footer-container">
+				
+			<div class="logo-parag">
+				<div class="logorey">
+					<img src="{% static 'images/logo3 2.png' %}" class="logory">
+				</div>
+				<div class="logopara" >
+				<p > we are located at Mbeya Soweto Road<br>
+				Gorofa number 423<br>
+				p.o.box 2331 </p>
+				</div>
+			</div>
+			<div class="footer-links">
+				<div class="links">
+					<a href="#">Interior</a>
+					<a href="#"> Nails</a>
+					<a href="#"> Fashion</a> 
+					<a href="#">Lifestyle</a>
+					<a href="#"> Lifestyle</a> 
+					<a href="#">Fashion</a> 
+					<a href="#">Lifestyle</a> 
+					<a href="#">Interior</a>
+					<a href="#"> Nails</a>
+					<a href="#"> Exterior</a>
+				
+				</div>
+				<div class="copyright" >
+					<p>Copyright@MalingaFashion&lifestyle.com</p>
+				</div>
+
+			</div>
+			<div class="socials">
+				<div class="social-footer">
+					<i class="fa fa-facebook" style="font-size:30px; color:white;"></i>
+					<i class="fa fa-instagram icon" style="font-size:30px; color:white;"></i>
+					<i class="fa fa-twitter icon"style="font-size:30px; color:white;"></i>
+					<i class="fa fa-pinterest icon" style="font-size:30px; color:white;"></i>
+					<i class="ion ion-social-youtube" style="font-size:30px; color:white;"></i>
+				</div>
+					<div class=" info-social">
+					<p>follow us on twitter as Malingas_one,<br>on Facebook as Malinga's_fashion,<br>on Instagram Malinga's-Fashion,<br>on Pinterest at Malingas'fashion & lifestyle,<br> on Youtube Malinga's Fashion & lifestyle.</p>
+					<div>
+			</div>
+			
+		</div>
+	</footer>
+		
+</body>
+</html>
+
+{% endblock %}

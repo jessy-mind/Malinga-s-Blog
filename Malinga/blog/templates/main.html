@@ -1,0 +1,60 @@
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Malinga Fashion & Lifestyle Bog">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Malinga Fashion & Lifestyle</title>
+	
+	 <!-- Favicon -->
+  <link rel="icon" href="{% static './images/favicon.ico">
+</head>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<!--<link rel="stylesheet" type="text/css" href="font-icons/font-awesome/css/font-awesome.min.css">-->
+<link rel="stylesheet" type="text/css" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'ionicons-2.0.1/css/ionicons.min.css' %}">
+
+<body>
+<!-- start of header-->
+	<div class="header">
+		<!--logo-->
+		
+				<img src="{% static 'images/logo.png' %}" class="logo">
+			<!--end of logo-->
+			<!--start of navigation bar-->
+		<div class="header-right">
+			<ul>
+				<li><a href="{% url 'blog:home' %}">Home</a></li>
+				<li><a href="{% url 'blog:blogs' %}">Blogs</a></li>
+				<li class="menu-list"><a href="{% url 'blog:category' %}">Categories</a>
+					<ul class="sub-menu">
+					<li><a href="">Nails</a></li>
+					<li><a href="">Interior</a></li>
+					<li><a href="">Exterior</a></li>
+					<li><a href="">Fashion</a></li>
+					<li><a href="">Lifestyle</a></li>
+					</ul>
+				</li>
+				<li><a href="">Trendings</a></li>
+				<li><a href="">About us</a></li>
+				<li class="menu-list"><a href="">Sign Up</a>
+					<ul class="sub-menu">
+					<li><a href="">Register</a></li>
+					<li><a href="">Login</a></li>
+					<li><a href="">Logout</a></li>
+					</ul>
+				</li>
+				<li><a href="">Contact us</a></li>
+				<li><a href=""><i class="ion ion-search" style="font-size:25px;color:white"></i></a></li>
+				
+			</ul>
+		</div>
+			
+		</div>
+
+{% block content %}
+
+{% endblock %}
+<body>
+
+</html>
